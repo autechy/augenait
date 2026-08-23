@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign In · Anurag University</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="auth-page">
+  <div class="auth-card">
+    <img src="anurag-university-logo.jpg" alt="Anurag University logo" class="auth-logo">
+    <span class="eyebrow">Academic Access</span>
+    <h1>Anurag University</h1>
+    <p>Sign in with your institutional Google account to access the Generative AI Tools portal.</p>
+    <button class="btn btn-primary auth-button" id="googleSignIn">Continue with Google</button>
+    <div id="authMessage" class="notice" hidden></div>
+    <p class="auth-note">Access is limited to authorised <strong>@anurag.edu.in</strong> accounts.</p>
+  </div>
+</main>
+<script type="module">
+import { signIn } from "./auth.js";
+const button = document.getElementById("googleSignIn");
+const message = document.getElementById("authMessage");
+button.addEventListener("click", async () => {
+  button.disabled = true;
+  button.textContent = "Signing in...";
+  message.hidden = true;
+  try {
+    const user = await signIn();
+    location.href = "index.html";
+  } catch (error) {
+    message.textContent = error.message || "Sign in failed.";
+    message.hidden = false;
+    button.disabled = false;
+    button.textContent = "Continue with Google";
+  }
+});
+</script>
+</body>
+</html>

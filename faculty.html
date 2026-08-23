@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faculty · Anurag University</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <img src="anurag-university-logo.jpg" alt="Anurag University logo">
+      <div class="brand-text"><div class="brand-title">Anurag University</div><div class="brand-sub">B.Tech · Generative AI Tools</div></div>
+    </a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation menu">☰</button>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li><a href="course.html" data-page="course.html">Course</a></li>
+        <li><a href="ai-tools.html" data-page="ai-tools.html">AI Tools</a></li>
+        <li><a href="experiments.html" data-page="experiments.html">Experiments</a></li>
+        <li><a href="resources.html" data-page="resources.html">Resources</a></li>
+        <li><a href="faculty.html" data-page="faculty.html">Faculty</a></li>
+        <li class="nav-more"><details><summary>More</summary><div class="more-menu">
+          <a href="about.html" data-page="about.html">University</a>
+          <a href="department.html" data-page="department.html">Department</a>
+          <a href="student-guide.html" data-page="student-guide.html">Student Guide</a>
+          <a href="practice.html" data-page="practice.html">Quiz &amp; Scenarios</a>
+          <a href="doubts.html" data-page="doubts.html">Student Doubts</a>
+          <a href="responsible-ai.html" data-page="responsible-ai.html">Responsible AI</a>
+          <a href="dos-donts.html" data-page="dos-donts.html">Do's &amp; Don'ts</a>
+          <a href="roadmap.html" data-page="roadmap.html">Roadmap</a>
+          <a href="toolkit.html" data-page="toolkit.html">Project Toolkit</a>
+          <a href="aiml-2030.html" data-page="aiml-2030.html">AIML Engineer 2030</a>
+          <a href="mission-vision.html" data-page="mission-vision.html">Mission &amp; Vision</a>
+        </div></details></li>
+      </ul>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button></div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Department of AIML</span>
+      <h1>Faculty Profiles</h1>
+      <p>Faculty profiles, teaching expertise, research interests and official contact fields are maintained through the faculty directory.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="faculty-directory">
+      <div class="search-row">
+        <input class="search-input" id="facultySearch" type="search" placeholder="Search faculty, designation, specialization..." aria-label="Search faculty">
+      </div>
+      <div class="source-note" id="facultyCount"></div>
+      <div class="faculty-list-grid" id="facultyGrid"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script src="faculty.js"></script>
+</body>
+</html>

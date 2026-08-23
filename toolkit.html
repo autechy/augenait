@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Project Builder Toolkit · Anurag University</title><link rel="stylesheet" href="style.css">
+</head><body><noscript><div style="position:fixed;top:0;left:0;right:0;z-index:9999;padding:10px 14px;background:#fff3cd;color:#664d03;text-align:center;font:600 14px/1.4 system-ui">JavaScript is required for interactive features such as search, filters, progress tracking and theme controls.</div></noscript><header class="site-header"><div class="container navbar">
+<a class="brand" href="index.html"><img src="anurag-university-logo.jpg" alt="Anurag University logo"><div class="brand-text"><div class="brand-title">Anurag University</div><div class="brand-sub">B.Tech · Generative AI Tools</div></div></a>
+<button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+<nav><ul class="nav-links" id="navLinks">
+<li><a href="index.html" data-page="index.html">Home</a></li>
+<li><a href="course.html" data-page="course.html">Course</a></li>
+<li><a href="ai-tools.html" data-page="ai-tools.html">AI Tools</a></li>
+<li><a href="experiments.html" data-page="experiments.html">Experiments</a></li>
+<li><a href="resources.html" data-page="resources.html">Resources</a></li>
+<li><a href="faculty.html" data-page="faculty.html">Faculty</a></li>
+<li class="nav-more"><details><summary>More</summary><div class="more-menu"><a href="practice.html" data-page="practice.html">Quiz &amp; Scenarios</a><a href="doubts.html" data-page="doubts.html">Student Doubts</a>
+<a href="about.html" data-page="about.html">University</a>
+<a href="department.html" data-page="department.html">Department</a>
+<a href="student-guide.html" data-page="student-guide.html">Student Guide</a>
+<a href="responsible-ai.html" data-page="responsible-ai.html">Responsible AI</a>
+<a href="dos-donts.html" data-page="dos-donts.html">Do's &amp; Don'ts</a>
+<a href="roadmap.html" data-page="roadmap.html">Roadmap</a>
+<a href="toolkit.html" data-page="toolkit.html">Project Toolkit</a>
+<a href="aiml-2030.html" data-page="aiml-2030.html">AIML Engineer 2030</a>
+<a href="mission-vision.html" data-page="mission-vision.html">Mission &amp; Vision</a>
+</div></details></li>
+</ul></nav>
+<div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button></div>
+</div></header><main><section class="page-hero"><div class="container"><span class="eyebrow">Build smarter</span><h1>Project Builder Toolkit</h1><p>Platforms, websites, AI, tools, and resources for students, developers, researchers, and hackathon teams.</p></div></section><section class="section"><div class="container"><div class="card"><div class="search-row"><input id="toolkitSearch" class="search-input" placeholder="Search the toolkit..."></div><p class="source-note">The toolkit is organized from the resource list supplied for this project. Official links are included where a reliable direct URL was provided in the site data; other entries are intentionally left as link placeholders.</p></div><div id="toolkitList" style="margin-top:18px"></div></div></section></main><div id="site-footer"></div><script src="data.js"></script><script src="main.js"></script><script>
+function renderToolkit(){const q=(document.getElementById('toolkitSearch').value||'').toLowerCase();const by={};tools.forEach(t=>{if(t.category in by)by[t.category].push(t);else by[t.category]=[t]});document.getElementById('toolkitList').innerHTML=Object.keys(by).map(cat=>{const arr=by[cat].filter(t=>!q||`${t.name} ${t.category}`.toLowerCase().includes(q));if(!arr.length)return '';return `<section class="card toolkit-category" style="margin-bottom:16px"><div class="toolkit-head"><div><div class="label">Toolkit category</div><h2 style="margin-top:3px">${cat}</h2></div><span class="badge">${arr.length} tools</span></div><div class="toolkit-grid">${arr.map(t=>`<div class="toolkit-item"><span>${t.name}</span>${t.url?`<a href="${t.url}" target="_blank" rel="noopener">Visit ↗</a>`:`<span class="source-note">Link placeholder</span>`}</div>`).join('')}</div></section>`}).join('')||`<div class="empty">No toolkit entries match your search.</div>`}
+window.addEventListener('DOMContentLoaded',()=>{document.getElementById('toolkitSearch').addEventListener('input',renderToolkit);renderToolkit()});
+</script><script type="module">
+import { watchAuth, isAllowedUser } from "./auth.js";
+watchAuth((user, state) => {
+  if (state?.configured === false) return;
+  if (!user || !isAllowedUser(user)) location.replace("auth.html");
+});
+</script></body></html>

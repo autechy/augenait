@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Roadmap · Anurag University</title><link rel="stylesheet" href="style.css">
+</head><body><noscript><div style="position:fixed;top:0;left:0;right:0;z-index:9999;padding:10px 14px;background:#fff3cd;color:#664d03;text-align:center;font:600 14px/1.4 system-ui">JavaScript is required for interactive features such as search, filters, progress tracking and theme controls.</div></noscript><header class="site-header"><div class="container navbar">
+<a class="brand" href="index.html"><img src="anurag-university-logo.jpg" alt="Anurag University logo"><div class="brand-text"><div class="brand-title">Anurag University</div><div class="brand-sub">B.Tech · Generative AI Tools</div></div></a>
+<button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+<nav><ul class="nav-links" id="navLinks">
+<li><a href="index.html" data-page="index.html">Home</a></li>
+<li><a href="course.html" data-page="course.html">Course</a></li>
+<li><a href="ai-tools.html" data-page="ai-tools.html">AI Tools</a></li>
+<li><a href="experiments.html" data-page="experiments.html">Experiments</a></li>
+<li><a href="resources.html" data-page="resources.html">Resources</a></li>
+<li><a href="faculty.html" data-page="faculty.html">Faculty</a></li>
+<li class="nav-more"><details><summary>More</summary><div class="more-menu"><a href="practice.html" data-page="practice.html">Quiz &amp; Scenarios</a><a href="doubts.html" data-page="doubts.html">Student Doubts</a>
+<a href="about.html" data-page="about.html">University</a>
+<a href="department.html" data-page="department.html">Department</a>
+<a href="student-guide.html" data-page="student-guide.html">Student Guide</a>
+<a href="responsible-ai.html" data-page="responsible-ai.html">Responsible AI</a>
+<a href="dos-donts.html" data-page="dos-donts.html">Do's &amp; Don'ts</a>
+<a href="roadmap.html" data-page="roadmap.html">Roadmap</a>
+<a href="toolkit.html" data-page="toolkit.html">Project Toolkit</a>
+<a href="aiml-2030.html" data-page="aiml-2030.html">AIML Engineer 2030</a>
+<a href="mission-vision.html" data-page="mission-vision.html">Mission &amp; Vision</a>
+</div></details></li>
+</ul></nav>
+<div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button></div>
+</div></header><main><section class="page-hero"><div class="container"><span class="eyebrow">Path</span><h1>First-Year Roadmap</h1><p>This is general student guidance, not a replacement for official curriculum information.</p></div></section><section class="section"><div class="container"><div class="timeline"><div class="timeline-item"><h3>Start with fundamentals</h3><p>Build a dependable base in programming, mathematics, and communication.</p></div><div class="timeline-item"><h3>Learn Git & GitHub</h3><p>Track your work and learn the basics of collaborative development.</p></div><div class="timeline-item"><h3>Explore Generative AI</h3><p>Understand AI assistants, prompts, image generation, and research workflows.</p></div><div class="timeline-item"><h3>Build small projects</h3><p>Turn concepts into small, explainable applications and experiments.</p></div><div class="timeline-item"><h3>Join activities</h3><p>Explore clubs, hackathons, presentations, and peer learning.</p></div><div class="timeline-item"><h3>Create a portfolio</h3><p>Keep selected projects, notes, and milestones that demonstrate what you can do.</p></div></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">AI roadmap</span><h2>From basics to projects</h2></div></div><div class="grid grid-4"><div class="card"><div class="meta">Level 1</div><h3>AI Basics</h3><p>What is AI and Generative AI?</p></div><div class="card"><div class="meta">Level 2</div><h3>Prompt Engineering</h3><p>Write clear, contextual prompts.</p></div><div class="card"><div class="meta">Level 3</div><h3>Tool Selection</h3><p>Choose tools based on the task.</p></div><div class="card"><div class="meta">Level 4</div><h3>Productivity</h3><p>Study, summarize, brainstorm, create.</p></div><div class="card"><div class="meta">Level 5</div><h3>Coding</h3><p>Use AI-assisted development thoughtfully.</p></div><div class="card"><div class="meta">Level 6</div><h3>Projects</h3><p>Build and document small AI-enabled projects.</p></div><div class="card"><div class="meta">Level 7</div><h3>Responsible AI</h3><p>Verify, protect data, and follow academic rules.</p></div></div></div></section></main><div id="site-footer"></div><script src="data.js"></script><script src="main.js"></script><script type="module">
+import { watchAuth, isAllowedUser } from "./auth.js";
+watchAuth((user, state) => {
+  if (state?.configured === false) return;
+  if (!user || !isAllowedUser(user)) location.replace("auth.html");
+});
+</script></body></html>

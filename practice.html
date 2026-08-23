@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz & Scenarios · Anurag University</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="site-header"><div class="container navbar">
+<a class="brand" href="index.html"><img src="anurag-university-logo.jpg" alt="Anurag University logo"><div class="brand-text"><div class="brand-title">Anurag University</div><div class="brand-sub">B.Tech · Generative AI Tools</div></div></a>
+<button class="mobile-menu" id="mobileMenu" aria-label="Open navigation menu">☰</button>
+<nav><ul class="nav-links" id="navLinks">
+<li><a href="index.html" data-page="index.html">Home</a></li><li><a href="course.html" data-page="course.html">Course</a></li><li><a href="ai-tools.html" data-page="ai-tools.html">AI Tools</a></li><li><a href="experiments.html" data-page="experiments.html">Experiments</a></li><li><a href="resources.html" data-page="resources.html">Resources</a></li><li><a href="faculty.html" data-page="faculty.html">Faculty</a></li>
+<li class="nav-more"><details><summary>More</summary><div class="more-menu"><a href="student-guide.html" data-page="student-guide.html">Student Guide</a><a href="practice.html" data-page="practice.html">Quiz &amp; Scenarios</a><a href="doubts.html" data-page="doubts.html">Student Doubts</a><a href="responsible-ai.html" data-page="responsible-ai.html">Responsible AI</a><a href="toolkit.html" data-page="toolkit.html">Project Toolkit</a><a href="aiml-2030.html" data-page="aiml-2030.html">AIML Engineer 2030</a></div></details></li>
+</ul></nav><div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button></div></div></header>
+<main><section class="page-hero"><div class="container"><span class="eyebrow">Practice Center</span><h1>Quiz &amp; Scenario Lab</h1><p>Practice course concepts, tool selection, prompting, verification, responsible AI, and practical decision-making.</p></div></section>
+<section class="section"><div class="practice-shell"><div class="practice-tabs"><button class="practice-tab active" data-tab="quiz">Quick Quiz</button><button class="practice-tab" data-tab="scenario">Scenario Lab</button><button class="practice-tab" data-tab="viva">Viva Practice</button></div>
+<div class="practice-panel active" id="panel-quiz"><div class="score-banner"><strong id="quizScore">Score: 0 / 10</strong><button class="btn btn-secondary" id="resetQuiz">Reset</button></div><div class="quiz-list" id="quizList"></div></div>
+<div class="practice-panel" id="panel-scenario"><div class="quiz-list" id="scenarioList"></div></div>
+<div class="practice-panel" id="panel-viva"><div class="scenario-card"><h2>Viva Practice</h2><p style="color:var(--muted);margin-top:8px">Select a question to reveal a concise answer guide.</p><div id="vivaList" class="quiz-list" style="margin-top:16px"></div></div></div>
+</div></section></main><div id="site-footer"></div>
+<script src="data.js"></script><script src="main.js"></script><script>
+const quiz = [
+{q:"Which course outcome focuses on selecting a suitable Generative AI tool for a real-world problem?",o:["CO1","CO2","CO3","CO5"],a:0,e:"CO1 focuses on identifying problems and selecting appropriate Generative AI tools."},
+{q:"Which practice helps improve prompt quality most directly?",o:["Adding irrelevant details","Providing clear task, context and expected output","Avoiding constraints","Copying the same prompt repeatedly"],a:1,e:"Clear task, context, constraints and expected output improve prompt quality."},
+{q:"Why should an AI-generated factual answer be verified?",o:["AI never gives useful answers","AI can produce plausible but incorrect information","Verification is only needed for code","AI outputs are always sourced"],a:1,e:"Generative AI can hallucinate or provide incomplete information."},
+{q:"Which is an appropriate academic use of AI?",o:["Submit an answer without reading it","Ask AI to explain a concept you are learning","Share your password with an AI tool","Use AI to bypass an assessment"],a:1,e:"Using AI as an explanation/tutoring aid strengthens learning."},
+{q:"Which tool category is most relevant to testing REST APIs?",o:["API and integration tools","Image generation","Project management","No-code design"],a:0,e:"API and integration tools are designed for API testing and workflows."},
+{q:"What is a good first response when AI-generated code fails?",o:["Submit it anyway","Understand the error, inspect the code and iterate","Delete your project","Hide the error"],a:1,e:"Debugging with understanding is part of responsible AI-assisted development."},
+{q:"Which information should not be pasted into an AI tool casually?",o:["A public article","A public syllabus","A password or sensitive record","A generic programming question"],a:2,e:"Passwords and sensitive/confidential data should be protected."},
+{q:"Which course activity explicitly includes presentation slide development?",o:["Week 2","Week 7","Week 10","Week 14"],a:3,e:"Week 14 includes developing presentation slides."},
+{q:"What is the main purpose of comparing multiple AI tools?",o:["Use every tool","Choose based on the task, output and constraints","Collect logos","Avoid learning fundamentals"],a:1,e:"Tool comparison supports task-appropriate selection."},
+{q:"Which mindset is most appropriate for AI-assisted learning?",o:["AI replaces understanding","Use AI to strengthen understanding and verify results","Never question AI","Avoid all AI tools"],a:1,e:"The goal is to amplify learning while retaining human judgment."}
+];
+const scenarios=[
+{q:"You receive a beautifully written answer from an AI tool with a citation you cannot find. What should you do?",o:["Use it immediately","Verify the source and remove unsupported claims","Invent a similar citation","Assume it is correct"],a:1,e:"Unverifiable citations should be checked before use."},
+{q:"A classmate asks an AI tool to complete an assignment and submit it unchanged. What is the better approach?",o:["Submit it","Use AI for explanation and improvement while doing the learning yourself","Share your login","Skip the assignment"],a:1,e:"AI should support learning, not replace required work."},
+{q:"You need to build a simple prototype quickly for a hackathon. What should guide your platform choice?",o:["Popularity alone","Task fit, speed, constraints and maintainability","The longest tool list","Random choice"],a:1,e:"Choose based on project needs and constraints."},
+{q:"An AI model suggests code that exposes an API key in source code. What should you do?",o:["Commit it","Remove the secret and use proper secret handling","Publish it","Send the key in the README"],a:1,e:"Secrets must not be exposed in source repositories."},
+{q:"Your AI-generated image contains an unexpected copyrighted logo. What is a sensible next step?",o:["Use it without checking","Review usage rights and replace/modify it if needed","Claim ownership automatically","Ignore it"],a:1,e:"Generated content still needs review for appropriate use and rights."},
+{q:"An AI-generated summary removes a key qualification from a technical paper. What should you do?",o:["Trust the summary","Compare the summary against the original source","Delete the paper","Use the shortest answer"],a:1,e:"Summaries should be checked against important source details."},
+{q:"A student asks an AI tool to reveal another student's private information. What is appropriate?",o:["Ask for more details","Refuse and protect privacy","Post it publicly","Use a second AI tool"],a:1,e:"Privacy and confidentiality should be protected."},
+{q:"Your first prompt generates a weak result. What is the best next step?",o:["Give up","Improve the prompt using clearer context, constraints and examples","Blame the tool","Paste the same prompt forever"],a:1,e:"Prompt iteration is part of effective AI use."}
+];
+const viva=[
+["What is Generative AI?","AI systems that generate new content such as text, images, code or other digital outputs based on learned patterns and instructions."],
+["What is prompt engineering?","Designing clear and contextual instructions to guide a Generative AI system toward useful output."],
+["What is a hallucination?","A plausible-looking but incorrect or unsupported AI-generated response."],
+["Why compare AI tools?","Different tools have different strengths, interfaces, modalities, limits and workflows."],
+["How should students use AI responsibly?","Use it as a learning assistant, verify important output, protect sensitive data, and follow academic rules."],
+["What is RAG?","Retrieval-Augmented Generation combines retrieval of relevant source material with generation to improve grounded answers."],
+["Why is Git important in AI projects?","It tracks changes, supports collaboration, and provides a reproducible development history."],
+["What makes a good student project?","A clear problem, working implementation, understandable design, evidence of testing, documentation and a demonstrable result."]
+];
+function renderQuestions(items,targetId,prefix){
+ const target=document.getElementById(targetId);
+ target.innerHTML=items.map((item,i)=>`<article class="quiz-question"><h3>${i+1}. ${item.q}</h3><div class="quiz-options">${item.o.map((o,j)=>`<label class="quiz-option"><input type="radio" name="${prefix}-${i}" value="${j}"><span>${o}</span></label>`).join("")}</div><button class="btn btn-soft check-answer" data-index="${i}" data-prefix="${prefix}">Check</button><div class="quiz-feedback" id="feedback-${prefix}-${i}" hidden></div></article>`).join("");
+ target.querySelectorAll(".check-answer").forEach(btn=>btn.addEventListener("click",()=>{const i=Number(btn.dataset.index);const prefix=btn.dataset.prefix;const checked=document.querySelector(`input[name="${prefix}-${i}"]:checked`);const fb=document.getElementById(`feedback-${prefix}-${i}`);if(!checked){fb.textContent="Choose an answer first.";fb.hidden=false;return;}const item=items[i];const correct=Number(checked.value)===item.a;fb.textContent=(correct?"Correct. ":"Not quite. ")+item.e;fb.hidden=false;if(prefix==="quiz")updateQuizScore();}));
+}
+function updateQuizScore(){let score=0;quiz.forEach((item,i)=>{const selected=document.querySelector(`input[name="quiz-${i}"]:checked`);if(selected&&Number(selected.value)===item.a)score++;});document.getElementById("quizScore").textContent=`Score: ${score} / ${quiz.length}`;localStorage.setItem("quizScore",String(score));}
+document.querySelectorAll(".practice-tab").forEach(tab=>tab.addEventListener("click",()=>{document.querySelectorAll(".practice-tab").forEach(t=>t.classList.remove("active"));document.querySelectorAll(".practice-panel").forEach(p=>p.classList.remove("active"));tab.classList.add("active");document.getElementById(`panel-${tab.dataset.tab}`).classList.add("active");}));
+renderQuestions(quiz,"quizList","quiz");renderQuestions(scenarios,"scenarioList","scenario");
+document.getElementById("resetQuiz").addEventListener("click",()=>{document.querySelectorAll('input[name^="quiz-"]').forEach(i=>i.checked=false);document.querySelectorAll('[id^="feedback-quiz-"]').forEach(x=>x.hidden=true);updateQuizScore();});
+document.getElementById("vivaList").innerHTML=viva.map((v,i)=>`<details class="quiz-question"><summary><strong>${i+1}. ${v[0]}</strong></summary><p style="color:var(--muted);margin-top:10px">${v[1]}</p></details>`).join("");

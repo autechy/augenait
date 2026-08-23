@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Course · Generative AI Tools</title><link rel="stylesheet" href="style.css">
+</head><body><noscript><div style="position:fixed;top:0;left:0;right:0;z-index:9999;padding:10px 14px;background:#fff3cd;color:#664d03;text-align:center;font:600 14px/1.4 system-ui">JavaScript is required for interactive features such as search, filters, progress tracking and theme controls.</div></noscript><header class="site-header"><div class="container navbar">
+<a class="brand" href="index.html"><img src="anurag-university-logo.jpg" alt="Anurag University logo"><div class="brand-text"><div class="brand-title">Anurag University</div><div class="brand-sub">B.Tech · Generative AI Tools</div></div></a>
+<button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+<nav><ul class="nav-links" id="navLinks">
+<li><a href="index.html" data-page="index.html">Home</a></li>
+<li><a href="course.html" data-page="course.html">Course</a></li>
+<li><a href="ai-tools.html" data-page="ai-tools.html">AI Tools</a></li>
+<li><a href="experiments.html" data-page="experiments.html">Experiments</a></li>
+<li><a href="resources.html" data-page="resources.html">Resources</a></li>
+<li><a href="faculty.html" data-page="faculty.html">Faculty</a></li>
+<li class="nav-more"><details><summary>More</summary><div class="more-menu"><a href="practice.html" data-page="practice.html">Quiz &amp; Scenarios</a><a href="doubts.html" data-page="doubts.html">Student Doubts</a>
+<a href="about.html" data-page="about.html">University</a>
+<a href="department.html" data-page="department.html">Department</a>
+<a href="student-guide.html" data-page="student-guide.html">Student Guide</a>
+<a href="responsible-ai.html" data-page="responsible-ai.html">Responsible AI</a>
+<a href="dos-donts.html" data-page="dos-donts.html">Do's &amp; Don'ts</a>
+<a href="roadmap.html" data-page="roadmap.html">Roadmap</a>
+<a href="toolkit.html" data-page="toolkit.html">Project Toolkit</a>
+<a href="aiml-2030.html" data-page="aiml-2030.html">AIML Engineer 2030</a>
+<a href="mission-vision.html" data-page="mission-vision.html">Mission &amp; Vision</a>
+</div></details></li>
+</ul></nav>
+<div class="nav-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button></div>
+</div></header><main><section class="page-hero"><div class="container"><span class="eyebrow">EMA1109</span><h1>Generative AI Tools</h1><p>B.Tech I Year I Semester · Common to AI and AIML. The syllabus lists 1-0-4 hours, 3 credits, CIE 80, SEE 20, and total 100 marks.</p></div></section><section class="section"><div class="container grid grid-4"><div class="card"><div class="meta">Programme</div><h3>B.Tech</h3><p>I Year · I Semester</p></div><div class="card"><div class="meta">Category</div><h3>Exploratory (PC)</h3><p>EMA1109</p></div><div class="card"><div class="meta">Credits</div><h3>3</h3><p>L-T-P: 1-0-4</p></div><div class="card"><div class="meta">Marks</div><h3>100</h3><p>CIE 80 · SEE 20</p></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Course outcomes</span><h2>What students should be able to do</h2></div></div><div class="grid grid-3"><div class="card"><h3>1. Select</h3><p>Identify real-world problems and select appropriate Generative AI tools.</p></div><div class="card"><h3>2. Prompt</h3><p>Apply prompt engineering techniques for accurate, context-aware output.</p></div><div class="card"><h3>3. Compare</h3><p>Identify and compare various Generative AI tools.</p></div><div class="card"><h3>4. Create</h3><p>Create text, images, presentations, and other digital content.</p></div><div class="card"><h3>5. Use responsibly</h3><p>Employ Generative AI tools ethically, responsibly, and securely.</p></div></div></div></section><section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Learning journey</span><h2>From first prompt to responsible project work</h2></div></div><div class="timeline"><div class="timeline-item"><h3>AI basics</h3><p>Understand Generative AI and the kinds of tasks it can support.</p></div><div class="timeline-item"><h3>Prompt engineering</h3><p>Learn to frame clear, useful, context-rich prompts.</p></div><div class="timeline-item"><h3>Tool selection</h3><p>Compare tools and choose based on the task.</p></div><div class="timeline-item"><h3>Content creation</h3><p>Work with text, images, presentations, and other formats.</p></div><div class="timeline-item"><h3>Practical experimentation</h3><p>Apply the ideas across the 14-week practical sequence.</p></div><div class="timeline-item"><h3>Responsible AI</h3><p>Verify output and use AI ethically, responsibly, and securely.</p></div></div></div></section></main><div id="site-footer"></div><script src="data.js"></script><script src="main.js"></script><script type="module">
+import { watchAuth, isAllowedUser } from "./auth.js";
+watchAuth((user, state) => {
+  if (state?.configured === false) return;
+  if (!user || !isAllowedUser(user)) location.replace("auth.html");
+});
+</script></body></html>

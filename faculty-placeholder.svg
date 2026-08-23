@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="440" viewBox="0 0 360 440">
+<rect width="360" height="440" rx="22" fill="#eef4fb"/>
+<circle cx="180" cy="145" r="68" fill="#17365d" opacity=".12"/>
+<circle cx="180" cy="137" r="42" fill="#17365d" opacity=".35"/>
+<path d="M92 330c18-70 158-70 176 0" fill="#17365d" opacity=".22"/>
+<text x="180" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#17365d">FACULTY PROFILE</text>
+</svg>
