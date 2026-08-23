@@ -83,9 +83,9 @@ button{cursor:pointer}
    FACULTY SINGLE-ROW DIRECTORY
 ========================================================= */
 .faculty-directory{width:min(96%,1280px);margin:0 auto}.faculty-list-grid{display:grid;gap:18px;margin-top:16px}
-.faculty-row-card{display:grid;grid-template-columns:27% minmax(0,1fr);min-height:16%;max-height:auto;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
-.faculty-photo-panel{width:16%;background:var(--soft-blue);overflow:hidden;border-right:1px solid var(--line)}
-.faculty-photo{width:16%;height:27%;min-height:16%;object-fit:cover;object-position:center}
+.faculty-row-card{display:grid;grid-template-columns:27% minmax(0,1fr);min-height:100px;max-height:auto;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.faculty-photo-panel{width:170px;background:var(--soft-blue);overflow:hidden;border-right:1px solid var(--line)}
+.faculty-photo{width:170px;height:100px;min-height:100px;object-fit:cover;object-position:center}
 .faculty-row-content{min-width:0;padding:20px 22px;overflow-y:auto;scrollbar-width:thin}
 .faculty-row-content::-webkit-scrollbar{width:6px}.faculty-row-content::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px}
 .faculty-row-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
