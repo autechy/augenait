@@ -1,33 +1,37 @@
 const facultyProfiles = [
   {
-    id: "faculty-generative-ai-tools2",
-    name: "Mr. SHASHANK REDDY V",
-    designation: "Assistant Professor",
-    specialization: "Artificial Intelligence and Machine Learning",
-    department: "Department of AIML",
-    qualification: "Master of Technology in Information Technology",
-    experience: "3+ Years",
-    email: "[Official Faculty Email]",
-    mobile: "[Official Faculty Mobile]",
-    incharge: "[Incharge For]",
-    photo: "New DP.png",
-    bio: "I am an Assistant Professor in the Department of Artificial Intelligence and Machine Learning at Anurag University. I have a Master's degree in Information Technology and over 3 years of experience in the field. My research interests include Generative AI, Deep Learning, IoT, DevOps, and Data Engineering.",
-    expertise: [
-      "Artificial Intelligence",
-      "Deep Learning",
-      "IoT",
-      "DevOps",
-      "Data Engineering"
-    ],
-    research: [
-      "Artificial Intelligence",
-      "Deep Learning",
-      "IoT",
-      "DevOps",
-      "Data Engineering"
-    ],
-    office: "IST: 09:00 AM to 04:05 PM"
-  }
+  id: "faculty-generative-ai-tools",
+  name: "Mr. SHASHANK REDDY V",
+  designation: "Assistant Professor",
+  specialization: "Artificial Intelligence and Machine Learning",
+  department: "Department of AIML",
+  qualification: "Master of Technology in Information Technology",
+  experience: "3+ Years",
+  email: "[Official Faculty Email]",
+  mobile: "[Official Faculty Mobile]",
+  incharge: ["Dept. AI Tools", "Dept. Alumini", "Dept. Coding Platforms", "GenAI Tools Coordinator", "I-I AIML - E 26 - 27"],
+  photo: "New DP.png",
+
+  bio: "I am an Assistant Professor in the Department of Artificial Intelligence and Machine Learning at Anurag University, with a Master of Technology in Information Technology and over three years of experience in teaching and technology-oriented academic work. My areas of interest span Artificial Intelligence, Generative AI, Deep Learning, IoT, DevOps, and Data Engineering. My professional focus is on helping students connect strong technical fundamentals with practical, industry-relevant applications. I am particularly interested in emerging AI technologies and their use in education, intelligent systems, automation, and real-world problem solving. Through teaching, mentoring, and project-oriented learning, I aim to encourage students to explore technology beyond the classroom, develop problem-solving skills, and build meaningful projects that strengthen both their technical knowledge and professional readiness.",
+
+  expertise: [
+    "Artificial Intelligence",
+    "Deep Learning",
+    "IoT",
+    "DevOps",
+    "Data Engineering"
+  ],
+
+  research: [
+    "Artificial Intelligence",
+    "Deep Learning",
+    "IoT",
+    "DevOps",
+    "Data Engineering"
+  ],
+
+  office: "IST: 09:00 AM to 04:05 PM"
+}
   // ,
   // {
   //   id: "faculty-generative-ai-tools",
