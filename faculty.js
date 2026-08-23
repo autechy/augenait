@@ -10,7 +10,7 @@ const facultyProfiles = [
   email: "[Official Faculty Email]",
   mobile: "[Official Faculty Mobile]",
   incharge: ["Dept. AI Tools", "Dept. Alumini", "Dept. Coding Platforms", "GenAI Tools Coordinator", "I-I AIML - E 26 - 27"],
-  photo: "New DP.png",
+  photo: "New DP - Cropped.png",
 
   bio: "I am an Assistant Professor in the Department of Artificial Intelligence and Machine Learning at Anurag University, with a Master of Technology in Information Technology and over three years of experience in teaching and technology-oriented academic work. My areas of interest span Artificial Intelligence, Generative AI, Deep Learning, IoT, DevOps, and Data Engineering. My professional focus is on helping students connect strong technical fundamentals with practical, industry-relevant applications. I am particularly interested in emerging AI technologies and their use in education, intelligent systems, automation, and real-world problem solving. Through teaching, mentoring, and project-oriented learning, I aim to encourage students to explore technology beyond the classroom, develop problem-solving skills, and build meaningful projects that strengthen both their technical knowledge and professional readiness.",
 
